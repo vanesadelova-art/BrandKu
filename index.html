@@ -34,9 +34,11 @@
             <p class="text-gray-600 text-lg mb-8 max-w-lg mx-auto">
                 Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan bisnis kecil.
             </p>
-            <button class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+            <button id="cta-btn"
+                    class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
                 Mulai gratis
             </button>
+            <p id="cta-feedback" class="mt-4 text-blue-600 font-medium hidden"></p>
         </section>
 
         <section class="py-16 px-12">
@@ -60,6 +62,19 @@
 
     <footer class="text-center py-8 text-white bg-black text-sm">
     <p>&copy; 2026 BrandKu. All rights reserved.</p>
-</footer>
+ </footer>
+<script>
+    const ctaBtn = document.querySelector('#cta-btn');
+    const ctaFeedback = document.querySelector('#cta-feedback')
+    let counter = 0;
+
+    ctaBtn.addEventListener('click', () => {
+        counter++;
+        console.log(counter);
+        
+        ctaFeedback.classList.remove('hidden')
+        ctaFeedback.textContent = 'halo harusnya muncul!'
+    });
+</script>
 </body>
 </html>
