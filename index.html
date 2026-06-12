@@ -3,58 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandku - landing Page</title>
-    <style>
-        h1 {
-            color: blue
+    <title>Brandku - Landing Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
         }
-        header {
-            background-color: grey;
-            border: 4px solid black;
-        }
-        header h1 {
-            color: red;
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <header style="">
-        <h1>Brandku</h1>
-    <nav>
-        <a href="Beranda.html">Beranda</a>
-        <a href="fitur.html">Fitur</a>
-        <a href="harga.html">Harga</a>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="flex items-center justify-between py-6 px-12 bg-white shadow-sm">
+        <h1 class="text-2xl font-bold text-blue-600">Brandku</h1>
+        <nav class="flex items-center gap-8 font-medium">
+            <a href="Beranda.html" class="hover:text-blue-600">Beranda</a>
+            <a href="fitur.html" class="hover:text-blue-600">Fitur</a>
+            <a href="harga.html" class="hover:text-blue-600">Harga</a>
+        </nav>
     </header>
+
     <main>
-        <section>
-            <h1>Solusi terbaik untuk bisnismu</h1>
-            <p>
-                Platform-all-in-one untuk manajmen, pemasaran, dan pertumbuhan bisnis kecil
+        <section class="text-center py-20 px-4">
+            <h1 class="text-5xl font-extrabold mb-6">Solusi terbaik untuk bisnismu</h1>
+            <p class="text-gray-600 text-lg mb-8 max-w-lg mx-auto">
+                Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan bisnis kecil.
             </p>
-            <button>Mulai gratis</button>
+            <button class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+                Mulai gratis
+            </button>
         </section>
 
-        <section>
-            <h2>Mengapa Brandku?</h2>
-            <div>
-                <article>
-                    <h3>Mudah Digunakan</h3>
-                    <p>Tidak perlu keahlian teknis. Setup dalam 5 menit</p>
+        <section class="py-16 px-12">
+            <h2 class="text-3xl font-bold text-center mb-12">Mengapa Brandku?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-semibold mb-2">Mudah Digunakan</h3>
+                    <p class="text-gray-600 text-sm">Tidak perlu keahlian teknis. Setup dalam 5 menit.</p>
                 </article>
-                <article>
-                    <h3>Serba Otomatis</h3>
-                    <p>Otomatiskan tugas berulang dan fokus pada hal yang penting</p>
+                <article class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-semibold mb-2">Serba Otomatis</h3>
+                    <p class="text-gray-600 text-sm">Otomatiskan tugas berulang dan fokus pada hal yang penting.</p>
                 </article>
-                <article>
-                    <h3>Laporan Real-Time</h3>
-                    <p>Pantau performa bisnismu kapan saja dan di mana saja</p>
+                <article class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-semibold mb-2">Laporan Real-Time</h3>
+                    <p class="text-gray-600 text-sm">Pantau performa bisnismu kapan saja dan di mana saja.</p>
                 </article>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 BrandKu. All rights reserved.</p>
-    </footer>
+    <footer class="text-center py-8 text-white bg-black text-sm">
+    <p>&copy; 2026 BrandKu. All rights reserved.</p>
+</footer>
 </body>
+</html>
